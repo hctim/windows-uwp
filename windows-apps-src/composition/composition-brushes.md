@@ -6,6 +6,7 @@ description: A brush paints the area of a Visual with its output. Different brus
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
+
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
@@ -120,11 +121,11 @@ CompositionSurfaceBrush _imageBrush;
 
 _compositor = Window.Current.Compositor;
 
-_licoriceBrush = _compositor.CreateSurfaceBrush();
+_imageBrush = _compositor.CreateSurfaceBrush();
 
 // The loadedSurface has a size of 0x0 till the image has been been downloaded, decoded and loaded to the surface. We can assign the surface to the CompositionSurfaceBrush and it will show up once the image is loaded to the surface.
 LoadedImageSurface _loadedSurface = LoadedImageSurface.StartLoadFromUri(new Uri("ms-appx:///Assets/licorice.jpg"));
-_licoriceBrush.Surface = _loadedSurface;
+_imageBrush.Surface = _loadedSurface;
 
 _imageVisual = _compositor.CreateSpriteVisual();
 _imageVisual.Brush = _imageBrush;
