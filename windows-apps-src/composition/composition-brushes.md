@@ -116,7 +116,7 @@ The following illustration and code shows a SpriteVisual painted with a bitmap o
 ```cs
 Compositor _compositor;
 SpriteVisual _imageVisual;
-CompositionSurfaceBrush _imageBrush;
+CompositionSurfaceBrush _licoriceBrush;
 
 _compositor = Window.Current.Compositor;
 
@@ -127,7 +127,7 @@ LoadedImageSurface _loadedSurface = LoadedImageSurface.StartLoadFromUri(new Uri(
 _licoriceBrush.Surface = _loadedSurface;
 
 _imageVisual = _compositor.CreateSpriteVisual();
-_imageVisual.Brush = _imageBrush;
+_imageVisual.Brush = _licoriceBrush;
 _imageVisual.Size = new Vector2(156, 156);
 ```
 
